@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia de Perguntas</title>
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <nav class="navbar navbar-light bg-primary">
+        <a class="navbar-brand" href="/">
+            <img src="/img/guia.png">
+        </a>
+
+    </nav>
    <div class="container">
 
-        <div class="card">
+        <div class="card" id="formulario-pergunta">
             <div class="card-header">
                 <h3>Realizar pergunta</h3>
             </div>
@@ -22,7 +28,7 @@
                     <br><label>Descrição</label>
                     <textarea placeholder="Descreva sua pergunta aqui" class="form-control"></textarea>
                     <br>
-                    <button class="btn btn-success">Perguntar</button>
+                    <button class="btn btn-primary">Perguntar</button>
                 </form>
             </div>
         </div>             
