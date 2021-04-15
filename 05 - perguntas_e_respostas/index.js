@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require("body-parser")
 const conection = require("./database/database");
-const perguntaModel = require("./database/Pergunta")
+const Pergunta = require("./database/Pergunta")
 
 //DATABASE
 conection
@@ -33,7 +33,12 @@ app.get("/perguntar", (req, res) => {
 app.post("/salvarpergunta", (req, res) => {
     let titulo = req.body.titulo
     let descricao = req.body.descricao
-    res.send("Formulário recebido! titulo: " + titulo + " " + "descricao: " + descricao)
+    Pergunta.create({
+        titulo,
+        descricao
+    }).then(() => {
+        res.redirect("/")
+    })
 })
 
 app.listen(8080, () => {
